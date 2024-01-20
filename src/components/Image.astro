@@ -1,0 +1,255 @@
+<a
+  href="https://www.mythrillfiction.com/the-dark-rider"
+  target="_blank"
+>
+  <div class="card-img">
+    <div class="wrapper">
+      <img src="/angular.png" class="cover-image" />
+    </div>
+    <h3 class="title">Angular</h3>
+    <img src="/angular.png" class="character" />
+  </div>
+</a>
+
+<a
+  href="https://www.mythrillfiction.com/force-mage"
+  target="_blank"
+>
+  <div class="card-img">
+    <div class="wrapper">
+      <img src="/astro.png" class="cover-image" />
+    </div>
+    <h3 class="title">Astro</h3>
+    <img src="/astro.png" class="character" />
+  </div>
+</a>
+<a
+  href="https://www.mythrillfiction.com/force-mage"
+  target="_blank"
+>
+  <div class="card-img">
+    <div class="wrapper">
+      <img src="/javascript.png" class="cover-image" />
+    </div>
+    <h3 class="title">javascript</h3>
+    <img src="/javascript.png" class="character" />
+  </div>
+</a>
+<a
+  href="https://www.mythrillfiction.com/force-mage"
+  target="_blank"
+>
+  <div class="card-img">
+    <div class="wrapper">
+      <img src="/react.png" class="cover-image" />
+    </div>
+    <h3 class="title">react</h3>
+    <img src="/react.png" class="character" />
+  </div>
+</a>
+<a
+  href="https://www.mythrillfiction.com/force-mage"
+  target="_blank"
+>
+  <div class="card-img">
+    <div class="wrapper">
+      <img src="/typescript.png" class="cover-image" />
+    </div>
+    <h3 class="title">typescript</h3>
+    <img src="/typescript.png" class="character" />
+  </div>
+</a>
+<a
+  href="https://www.mythrillfiction.com/force-mage"
+  target="_blank"
+>
+  <div class="card-img">
+    <div class="wrapper">
+      <img src="/expressjs.png" class="cover-image" />
+    </div>
+    <h3 class="title">express</h3>
+    <img src="/expressjs.png" class="character" />
+  </div>
+</a>
+<a
+  href="https://www.mythrillfiction.com/force-mage"
+  target="_blank"
+>
+  <div class="card-img">
+    <div class="wrapper">
+      <img src="/nodejs.png" class="cover-image" />
+    </div>
+    <h3 class="title">nodejs</h3>
+    <img src="/nodejs.png" class="character" />
+  </div>
+</a>
+<a
+  href="https://www.mythrillfiction.com/force-mage"
+  target="_blank"
+>
+  <div class="card-img">
+    <div class="wrapper">
+      <img src="/zustand.png" class="cover-image" />
+    </div>
+    <h3 class="title">zustand</h3>
+    <img src="/zustand.png" class="character" />
+  </div>
+</a>
+<a
+  href="https://www.mythrillfiction.com/force-mage"
+  target="_blank"
+>
+  <div class="card-img">
+    <div class="wrapper">
+      <img src="/postgress.png" class="cover-image" />
+    </div>
+    <h3 class="title">postgress</h3>
+    <img src="/postgress.png" class="character" />
+  </div>
+</a>
+<a
+  href="https://www.mythrillfiction.com/force-mage"
+  target="_blank"
+>
+  <div class="card-img">
+    <div class="wrapper">
+      <img src="/html5.png" class="cover-image" />
+    </div>
+    <h3 class="title">html5</h3>
+    <img src="/html5.png" class="character" />
+  </div>
+</a>
+<a
+  href="https://www.mythrillfiction.com/force-mage"
+  target="_blank"
+>
+  <div class="card-img">
+    <div class="wrapper">
+      <img src="/css3.png" class="cover-image" />
+    </div>
+    <h3 class="title">css3</h3>
+    <img src="/css3.png" class="character" />
+  </div>
+</a>
+<a
+  href="https://www.mythrillfiction.com/force-mage"
+  target="_blank"
+>
+  <div class="card-img">
+    <div class="wrapper">
+      <img src="/sass.png" class="cover-image" />
+    </div>
+    <h3 class="title">sass</h3>
+    <img src="/sass.png" class="character" />
+  </div>
+</a>
+<style>
+  :root {
+    --card-height: 100px;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  a {
+    text-decoration: none;
+    padding: 1rem;
+  }
+  .card-img {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 2500px;
+  }
+
+  .cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .card-img:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  }
+
+  .wrapper::before,
+  .wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+  }
+  .wrapper::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(
+      to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+    );
+  }
+  .wrapper::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(
+      to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%
+    );
+  }
+
+  .card-img:hover .wrapper::before,
+  .wrapper::after {
+    opacity: 1;
+  }
+
+  .card-img:hover .wrapper::after {
+    height: 120px;
+  }
+  .title {
+    width: 100%;
+    display: flex-end;
+    transition: transform 0.5s;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-size: large;
+    position: absolute;
+    bottom: -10px;
+    text-align: center;
+    justify-content: center;
+    color: aliceblue;
+  }
+  .card-img:hover .title {
+    transform: translate3d(0%, -90px, 100px);
+  }
+
+  .character {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .card-img:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -8%, 90px);
+  }
+</style>

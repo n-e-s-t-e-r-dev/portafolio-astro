@@ -1,0 +1,18 @@
+---
+interface Props {
+	welcomeh3: string;
+	parrafo: string;
+}
+
+const {welcomeh3, parrafo } = Astro.props;
+---
+<section id="welcome-section">
+    <div id="interactive-background">
+        <div id="welcome-text">
+            <h3>{welcomeh3}</h3>
+            <p>{parrafo}</p>
+        </div>
+        <div id="welcome-background-1"></div>
+        <div id="welcome-background-2"></div>
+    </div>
+</section>
