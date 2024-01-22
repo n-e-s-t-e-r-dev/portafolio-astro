@@ -1,0 +1,103 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer
+  class=""
+>
+  <div
+    class=""
+  >
+    <span
+      class=""
+      >© {currentYear}
+      <a href="https://nester.dev/" class="">nesterdev</a>. Casi
+      todos los derechos reservados
+    </span>
+    <ul
+      class=""
+    >
+      <li>
+        <a href="/#about" class="">About</a>
+      </li>
+      <li>
+        <a href="#" class="">Contacto</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<style>
+  /* Estilos para el footer */
+  footer {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    background-color: rgba(0, 0, 0, 0.722);
+    backdrop-filter: blur(8px);
+    width: 100%;
+    
+  }
+
+  /* Estilos para el contenido del footer */
+  footer > div {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1120px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Estilos para el texto de derechos de autor */
+  footer span {
+    font-size: 0.875rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    dark-mode: rgba(255, 255, 255, 0.9);
+  }
+
+  /* Estilos para los enlaces en el texto de derechos de autor */
+  footer a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    dark-mode: rgba(255, 255, 255, 0.9);
+    transition: underline 0.2s ease-in-out;
+  }
+
+  /* Estilos para los enlaces en el texto de derechos de autor al pasar el ratón */
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  /* Estilos para la lista de enlaces en el footer */
+  footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    dark-mode: rgba(255, 255, 255, 0.9);
+  }
+
+  /* Estilos para cada elemento de la lista de enlaces en el footer */
+  footer li {
+    margin-right: 1rem;
+  }
+
+  /* Estilos para los enlaces en la lista de enlaces en el footer */
+  footer li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    dark-mode: rgba(255, 255, 255, 0.9);
+    transition: underline 0.2s ease-in-out;
+  }
+
+  /* Estilos para los enlaces en la lista de enlaces en el footer al pasar el ratón */
+  footer li a:hover {
+    text-decoration: underline;
+  }
+</style>

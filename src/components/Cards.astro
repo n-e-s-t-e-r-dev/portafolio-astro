@@ -78,12 +78,12 @@ import Card from "./Card.astro";
 
 <style>
   :root {
-  --color1: #0c0c36;
-  --color2:#154261;
-  --color3:#7385a1;
-  --color4:#cdd4e0;
-  --color5: #f3f3f3;
-}
+    --color1: #0c0c36;
+    --color2: #154261;
+    --color3: #7385a1;
+    --color4: #cdd4e0;
+    --color5: #f3f3f3;
+  }
   * {
     margin: 0;
     padding: 0;
@@ -109,51 +109,133 @@ import Card from "./Card.astro";
 
   .items-1 {
     grid-area: items-1;
+    padding: 15px 5px;
     height: 100%;
     background-color: var(--color5);
-    box-shadow: var(--color1);
+    -webkit-box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    filter: blur(2px);
+  }
+  .items-1:hover {
+    grid-area: items-1;
+    padding: 15px 5px;
+    height: 100%;
+    box-shadow: var(--color3);
+    filter: blur(0px);
   }
 
   .items-2 {
     grid-area: items-2;
     height: 100%;
     background-color: var(--color5);
-    box-shadow: var(--color1)
+    -webkit-box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    filter: blur(2px);
+  }
+  .items-2:hover {
+    grid-area: items-2;
+    height: 100%;
+    background-color: var(--color5);
+    box-shadow: var(--color3);
+    filter: blur(0px);
   }
   .items-3 {
     grid-area: items-3;
     height: 100%;
     background-color: var(--color5);
+    -webkit-box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    filter: blur(2px);
+  }
+  .items-3:hover {
+    grid-area: items-3;
+    height: 100%;
+    background-color: var(--color5);
     box-shadow: var(--color3);
+    filter: blur(0px);
   }
   .items-4 {
     grid-area: items-4;
     height: 100%;
     background-color: var(--color5);
     box-shadow: var(--color3);
+    -webkit-box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    filter: blur(2px);
+  }
+  .items-4:hover {
+    grid-area: items-4;
+    height: 100%;
+    background-color: var(--color5);
+    box-shadow: var(--color3);
+    filter: blur(0px);
   }
   .items-5 {
     grid-area: items-5;
     height: 100%;
     background-color: var(--color5);
+    -webkit-box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    filter: blur(2px);
+  }
+  .items-5:hover {
+    grid-area: items-5;
+    height: 100%;
+    background-color: var(--color5);
     box-shadow: var(--color3);
+    filter: blur(0px);
   }
   .items-6 {
     grid-area: items-6;
     height: 100%;
     background-color: var(--color5);
+    -webkit-box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    filter: blur(2px);
+  }
+  .items-6:hover {
+    grid-area: items-6;
+    height: 100%;
+    background-color: var(--color5);
     box-shadow: var(--color3);
+    filter: blur(0px);
   }
   .items-7 {
     grid-area: items-7;
     height: 100%;
     background-color: var(--color5);
+    -webkit-box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    filter: blur(2px);
+  }
+  .items-7:hover {
+    grid-area: items-7;
+    height: 100%;
+    background-color: var(--color5);
     box-shadow: var(--color3);
+    filter: blur(0px);
   }
   .items-8 {
     grid-area: items-8;
     height: 100%;
     background-color: var(--color5);
+    -webkit-box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 26px 4px rgba(0, 0, 0, 0.68);
+    filter: blur(2px);
+  }
+  .items-8:hover {
+    grid-area: items-8;
+    height: 100%;
+    background-color: var(--color5);
     box-shadow: var(--color3);
+    filter: blur(0px);
   }
 </style>

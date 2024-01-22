@@ -1,13 +1,36 @@
+---
+const navItems = [
+  {
+    title: 'about',
+    url: '/#about'
+  },
+  {
+    title: 'projects',
+    url: '/#projects'
+  },
+  {
+    title: 'interesting',
+    url: '/#interesting'
+  },
+  {
+    title: 'contact',
+    url: '/#contact'
+  },
+]
+
+---
+
 <header>
   <a href="./" class="personal-logo" id="personal-logo">nesterdev</a>
   <div id="hamburger"></div>
   <nav>
-    <a class="nav-links" href="#welcome-section">About</a>
-    <a class="nav-links" href="#welcome-section">Projects</a>
-    <a class="nav-links" href="#welcome-section">Interesting</a>
-    <a class="nav-links" href="#welcome-section">Contact</a>
     <a href="" class="img"><img src="/github.webp" alt="logo github"></a>
     <a href="" class="img"><img src="/linkedin.webp" alt="logo linkedin"></a>
+    {navItems.map(link => (
+      <a class="nav-links"
+        href={link.url}>{link.title}</a
+      >
+    ))}
   </nav>
 </header>
 
@@ -73,3 +96,5 @@
     height: 1.40rem;
   }
 </style>
+
+

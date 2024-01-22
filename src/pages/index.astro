@@ -2,32 +2,47 @@
 import Layout from "../layouts/Layout.astro";
 import Welcome from "../components/Welcome.astro";
 import Image from "../components/Image.astro";
-import Header from "../components/Header.astro";
 import Contact from "../components/Contact.astro";
 import Projects from "../components/Projects.astro"
 import Cards from "../components/Cards.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 
 const hi = "Hi I´m Carlos!";
 const text1 =
   "A Fullstack Junior Developer in search of new challenges. Creativity, problem solving, and team workare three of my strengths. Check out below to see some of my most recent projects!";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="AndresMuñoz.Dev">
   <Header />
-  <Welcome  welcomeh3={hi} parrafo={text1} />
- 
-  <Projects />
-  <Cards />
-  <section class="section-technologies">
-    <h3>Technologies I know:</h3>
-   <div class="technologies">
-      <div class="slider">
-        <Image />
-      </div>
-    </div>
-  </section>
-  
-  <Contact />
+  <main>
+    <section id="about">
+      <Welcome welcomeh3={hi} parrafo={text1} />
+    </section>
+    <section id="projects">
+      <Projects />
+    </section>
+    <section>
+      <Cards />
+    </section>
+    <section id="interesting">
+      <section class="section-technologies">
+        <h3>Technologies I know:</h3>
+        <div class="technologies">
+          <div class="slider">
+            <Image />
+          </div>
+        </div>
+      </section>
+    </section>
+    
+    <section id="contact">
+      <Contact />
+    </section>
+    <section>
+      <Footer />
+    </section>
+</main>
 </Layout>
 
 <style>
