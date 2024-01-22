@@ -1,8 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import Welcome from "../components/Welcome.astro";
 import Image from "../components/Image.astro";
+import Header from "../components/Header.astro";
+import Contact from "../components/Contact.astro";
+import Projects from "../components/Projects.astro"
+import Cards from "../components/Cards.astro";
 
 const hi = "Hi I´m Carlos!";
 const text1 =
@@ -10,45 +13,52 @@ const text1 =
 ---
 
 <Layout title="Welcome to Astro.">
-  <main>
-    <Welcome welcomeh3={hi} parrafo={text1} />
-
+  <Header />
+  <Welcome  welcomeh3={hi} parrafo={text1} />
+  <section class="section-technologies">
     <h3>Technologies I know:</h3>
-    <div class="technologies">
+   <div class="technologies">
       <div class="slider">
-       <Image />
+        <Image />
       </div>
     </div>
-  </main>
+  </section>
+  <Contact />
+  <Projects />
+  <Cards />
 </Layout>
 
 <style>
-
  *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
  }
- main{
-  width: 100%;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
+ 
+ .section-technologies{
+  padding: 80px 0 80px 0;
+  text-align: center;
+  vertical-align: middle;
+  letter-spacing: 2px;
+ }
+ .section-technologies h3{
+  padding: 80px 0 80px 0;
+  text-align: center;
+  vertical-align: middle;
+  letter-spacing: 2px;
+  text-transform: uppercase;
  }
   .technologies{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   }
   .slider {
     display: flex;
     max-width: 100%;
     padding: 1rem 4rem;
-    background-color: rgba(12, 13, 19, 0.853);
+    background-color: linear-gradient(rgb(21 18 19) 0%, rgb(180 72 0) 50%);
     justify-content: space-between;
-    border-radius: 10px;
-    border: 1px solid rgba(3, 50, 0, 0.954);
     box-shadow: -webkit-box-shadow: inset 3px -19px 47px 31px rgba(13,13,13,1);
                 -moz-box-shadow: inset 3px -19px 47px 31px rgba(13,13,13,1);
                  box-shadow: inset 3px -19px 47px 31px rgba(13,13,13,1);
@@ -57,10 +67,7 @@ const text1 =
     display: flex;
     max-width: 100%;
     padding: 1rem 4rem;
-    background-color: rgba(34, 1, 63, 0.826);
     justify-content: space-between;
-    border-radius: 10px;
-    border: 1px solid rgba(137, 2, 255, 0.954);
     box-shadow: -webkit-box-shadow: inset 3px -19px 47px 31px rgba(13,13,13,1);
                 -moz-box-shadow: inset 3px -19px 47px 31px rgba(13,13,13,1);
     box-shadow: inset 3px -19px 47px 31px rgba(13,13,13,1);

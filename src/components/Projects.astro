@@ -1,0 +1,326 @@
+<section class="projects-section">
+  <div class="dev-projects">
+    <div class="dev-projects-left-side">
+      <div class="dev-projects-text">
+        <h1>Projects</h1>
+        <p>
+          Currently, the repositories I have published on Github are my projects
+          as a student. They are focused on the Front End part and developed
+          with technologies such as JavaScript, TypeScript, or React. I'm
+          working on new projects to publish soon.
+        </p>
+        <a
+          class="link-button"
+          class="dev-projects-text-button"
+          href="https://github.com/n-e-s-t-e-r-dev"
+          target="_blank">Github</a
+        >
+      </div>
+    </div>
+
+    <div class="dev-projects-right-side">
+      <div class="dev-projects-window">
+        <div class="window-header">
+          <div class="window-button window-button-close"></div>
+          <div class="window-button window-button-minimize"></div>
+          <div class="window-button window-button-maximize"></div>
+        </div>
+
+        <div class="window-body">
+          <span>&gt; Here you have the links to</span>
+          <span>&gt; my most relevant repositories</span>
+          <span>&gt; Take a look!</span>
+          <span
+            >&gt; <a
+              class="intro-repository1-link"
+              href="https://github.com/n-e-s-t-e-r-dev/Mi-portafolio-en-React"
+              target="_blank"
+            >
+              My Portfolio</a
+            > - <a
+              class="intro-repository2-link"
+              href="https://tubular-platypus-4907a3.netlify.app/"
+              target="_blank"
+              >E-CCOMERCE
+            </a>
+            - <a
+              class="intro-repository3-link"
+              href="https://lighthearted-bavarois-7ab6e7.netlify.app/"
+              target="_blank"
+              >Rick And Morty
+            </a></span
+          >
+          <span>&gt; <span class="next-command-indicator">_</span></span>
+        </div>
+      </div>
+
+      <div class="dev-projects-background"></div>
+    </div>
+  </div>
+</section>
+<style>
+  .projects-section {
+    display: block;
+    position: relative;
+    padding: 150px 0 75px 0;
+    background-color: #fff;
+    width: 100%;
+  }
+
+  .projects-section .dev-projects {
+    display: flex;
+    width: 90%;
+    height: 70vh;
+    max-height: 500px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .projects-section .dev-projects .dev-projects-left-side {
+    width: 40%;
+    height: 100%;
+  }
+  .projects-section .dev-projects .dev-projects-left-side .dev-projects-text {
+    display: block;
+    width: 80%;
+    z-index: 2;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .projects-section .dev-projects .dev-projects-left-side .dev-projects-text h1 {
+    margin-top: 0;
+    font-family: "Lustria", serif;
+}
+.projects-section .dev-projects .dev-projects-left-side .dev-projects-text p {
+    font-family: "Lato", sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+
+.link-button {
+    background-color: #222;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: small;
+    box-sizing: border-box;
+    display: inline-block;
+    border-radius: 25px; 
+}
+  .dev-projects-right-side {
+    width: 60%;
+    position: relative;
+    height: 100%;
+  }
+
+  .projects-section
+    .dev-projects
+    .dev-projects-right-side
+    .dev-projects-window
+    .window-body
+    span {
+    font-size: calc(16px + 6 * (100vw - 320px) / 1600);
+  }
+
+  .dev-projects-left-side .dev-projects-text {
+    display: block;
+    width: 80%;
+    z-index: 2;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .dev-projects-right-side .dev-projects-window {
+    display: block;
+    position: relative;
+    z-index: 2;
+    width: 70%;
+    max-width: 500px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    left: 30%;
+    outline: 15px solid #fff;
+  }
+
+  .dev-projects .dev-projects-background {
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    top: 30%;
+    right: 15%;
+    left: 15%;
+    background: #c5ccb2;
+    background: linear-gradient(90deg, rgb(12 13 10) 0%, rgb(117 2 2) 70%);
+    z-index: 1;
+  }
+
+  .projects-section
+    .dev-projects
+    .dev-projects-right-side
+    .dev-projects-window
+    .window-header {
+    display: block;
+    width: 100%;
+    padding: 10px 15px 8px 15px;
+    box-sizing: border-box;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #eee;
+  }
+
+  .projects-section
+    .dev-projects
+    .dev-projects-right-side
+    .dev-projects-window
+    .window-header
+    .window-button {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+    border-radius: 50%;
+  }
+  .projects-section
+    .dev-projects
+    .dev-projects-right-side
+    .dev-projects-window
+    .window-body {
+    display: block;
+    height: 300px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    background-color: rgb(22, 4, 125);
+  }
+  .projects-section
+    .dev-projects
+    .dev-projects-right-side
+    .dev-projects-window
+    .window-body
+    span {
+    font-size: calc(16px + 6 * (100vw - 320px) / 1600);
+  }
+  .projects-section
+    .dev-projects
+    .dev-projects-right-side
+    .dev-projects-window
+    .window-header
+    .window-button-close {
+    background-color: #ff5f53;
+  }
+  .projects-section
+    .dev-projects
+    .dev-projects-right-side
+    .dev-projects-window
+    .window-header
+    .window-button-minimize {
+    background-color: #ffbb37;
+  }
+  .projects-section
+    .dev-projects
+    .dev-projects-right-side
+    .dev-projects-window
+    .window-header
+    .window-button-maximize {
+    background-color: #01cd4a;
+  }
+  .projects-section
+    .dev-projects
+    .dev-projects-right-side
+    .dev-projects-window
+    .window-body
+    span {
+    display: block;
+    color: #fafafa;
+    font-family: "Inconsolata", monospace;
+    line-height: 2;
+  }
+  .projects-section
+    .dev-projects
+    .dev-projects-right-side
+    .dev-projects-window
+    .window-body
+    span
+    a {
+    text-decoration: none;
+    transition: 0.15s opacity ease-in-out;
+    font-family: "Inconsolata", monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .projects-section
+    .dev-projects
+    .dev-projects-right-side
+    .dev-projects-window
+    .window-body
+    span
+    .intro-repository1-link {
+    color: hotpink;
+    border-bottom: 1px dashed hotpink;
+  }
+  .dev-projects-window .window-body span .intro-repository2-link {
+    color: #ffff80;
+    border-bottom: 1px dashed #ffff80;
+  }
+  .projects-section
+    .dev-projects
+    .dev-projects-right-side
+    .dev-projects-window
+    .window-body
+    span
+    .intro-repository3-link {
+    color: #79addc;
+    border-bottom: 1px dashed #8fb8de;
+  }
+
+  @-webkit-keyframes invisible-to-visible {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes invisible-to-visible {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .projects-section
+    .dev-projects
+    .dev-projects-right-side
+    .dev-projects-window
+    .window-body
+    span {
+    display: block;
+    color: #fafafa;
+    font-family: "Inconsolata", monospace;
+    line-height: 2;
+  }
+  .projects-section
+    .dev-projects
+    .dev-projects-right-side
+    .dev-projects-window
+    .window-body
+    .next-command-indicator {
+    display: inline;
+    -webkit-animation-name: invisible-to-visible;
+    animation-name: invisible-to-visible;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.75s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+</style>

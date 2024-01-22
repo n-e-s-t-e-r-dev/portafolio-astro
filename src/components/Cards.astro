@@ -1,0 +1,159 @@
+---
+import Card from "./Card.astro";
+---
+
+<section class="card">
+  <div class="items-1">
+    <Card
+      title="Ecommerce Reactjs"
+      body="Este ecommerce fue un reto para mi, ya que nos dieron 48 horas para crearlo"
+      href="https://tubular-platypus-4907a3.netlify.app/"
+      myproject="/ecommerce.png"
+    />
+  </div>
+
+  <div class="items-2">
+    <Card
+      title="pokemon Reactjs"
+      body="Este ecommerce fue un reto para mi, ya que nos dieron 48 horas para crearlo"
+      href="https://tubular-platypus-4907a3.netlify.app/"
+      myproject="/pokemons.png"
+    />
+  </div>
+
+  <div class="items-3">
+    <Card
+      title="Ecommerce Reactjs"
+      body="Este ecommerce fue un reto para mi, ya que nos dieron 48 horas para crearlo"
+      href="https://tubular-platypus-4907a3.netlify.app/"
+      myproject="/ecommerceapi.png"
+    />
+  </div>
+
+  <div class="items-4">
+    <Card
+      title="Ecommerce Reactjs"
+      body="Este ecommerce fue un reto para mi, ya que nos dieron 48 horas para crearlo"
+      href="https://tubular-platypus-4907a3.netlify.app/"
+      myproject="/Academlo-Store-react.png"
+    />
+  </div>
+
+  <div class="items-5">
+    <Card
+      title="Ecommerce Reactjs"
+      body="Este ecommerce fue un reto para mi, ya que nos dieron 48 horas para crearlo"
+      href="https://tubular-platypus-4907a3.netlify.app/"
+      myproject="/app-clima.png"
+    />
+  </div>
+
+  <div class="items-6">
+    <Card
+      title="Ecommerce Reactjs"
+      body="Este ecommerce fue un reto para mi, ya que nos dieron 48 horas para crearlo"
+      href="https://tubular-platypus-4907a3.netlify.app/"
+      myproject="/Bosque-Parallax.png"
+    />
+  </div>
+
+  <div class="items-7">
+    <Card
+      title="Ecommerce Reactjs"
+      body="Este ecommerce fue un reto para mi, ya que nos dieron 48 horas para crearlo"
+      href="https://tubular-platypus-4907a3.netlify.app/"
+      myproject="/rick-and-morthy.png"
+    />
+  </div>
+
+  <div class="items-8">
+    <Card
+      title="Ecommerce Reactjs"
+      body="Este ecommerce fue un reto para mi, ya que nos dieron 48 horas para crearlo"
+      href="https://tubular-platypus-4907a3.netlify.app/"
+      myproject="/userlist.png"
+    />
+  </div>
+</section>
+
+<style>
+  :root {
+  --color1: #0c0c36;
+  --color2:#154261;
+  --color3:#7385a1;
+  --color4:#cdd4e0;
+  --color5: #f3f3f3;
+}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .card {
+    outline: 1% solid var(--color4);
+    border: none;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    background-color: var(--color5);
+    gap: 1.5% 1.5%;
+    grid-template-areas:
+      "items-1 items-1 items-1 items-2"
+      "items-1 items-1 items-1 items-3"
+      "items-5 items-4 items-4 items-4"
+      "items-6 items-4 items-4 items-4"
+      "items-7 items-7 items-8 items-8"; /* Add semicolon here */
+
+    width: 100%;
+  }
+
+  .items-1 {
+    grid-area: items-1;
+    height: 100%;
+    background-color: var(--color5);
+    box-shadow: var(--color1);
+  }
+
+  .items-2 {
+    grid-area: items-2;
+    height: 100%;
+    background-color: var(--color5);
+    box-shadow: var(--color1)
+  }
+  .items-3 {
+    grid-area: items-3;
+    height: 100%;
+    background-color: var(--color5);
+    box-shadow: var(--color3);
+  }
+  .items-4 {
+    grid-area: items-4;
+    height: 100%;
+    background-color: var(--color5);
+    box-shadow: var(--color3);
+  }
+  .items-5 {
+    grid-area: items-5;
+    height: 100%;
+    background-color: var(--color5);
+    box-shadow: var(--color3);
+  }
+  .items-6 {
+    grid-area: items-6;
+    height: 100%;
+    background-color: var(--color5);
+    box-shadow: var(--color3);
+  }
+  .items-7 {
+    grid-area: items-7;
+    height: 100%;
+    background-color: var(--color5);
+    box-shadow: var(--color3);
+  }
+  .items-8 {
+    grid-area: items-8;
+    height: 100%;
+    background-color: var(--color5);
+    box-shadow: var(--color3);
+  }
+</style>

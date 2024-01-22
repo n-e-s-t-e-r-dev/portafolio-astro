@@ -1,0 +1,119 @@
+<section class="contact-section">
+  <div class="contact-left-side" id="contact-left-side">
+    <img class="contact-img" src="/mailbox.png" alt="Mailbox" />
+  </div>
+  <div class="contact-right-side">
+    <div class="contact-information">
+      <h1>Contact</h1>
+      <p>If you want to get in touch with me, just fill the form below!</p>
+    </div>
+
+    <form
+      id="contact-form"
+      action="https://formspree.io/f/xnqyoqda"
+      method="POST"
+    >
+      <input
+        id="form-email"
+        type="email"
+        class="form-input"
+        name="email"
+        placeholder="Email"
+        required=""
+      /><br />
+      <textarea
+        id="form-message"
+        name="message"
+        placeholder="Message"
+        required=""></textarea>
+      <button id="contact-button" type="submit">send</button>
+      <p id="form-status"></p>
+    </form>
+  </div>
+</section>
+
+<style>
+    .contact-section {
+    display: flex;
+    position: relative;
+    width: 100%;
+    background: #fff3eb;
+    background: linear-gradient(rgb(180 72 0) 0%, rgb(21 18 19) 50%);
+    padding: 100px 100px;
+  }
+  .contact-left-side {
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-self: center;
+  }
+  .contact-left-side img{
+    width: 40%;
+    margin: 0 auto;
+  }
+  .contact-right-side {
+    width: 50%;
+    height: 100%;
+    display: block;
+    position: relative;
+  }
+  .contact-right-side .contact-information {
+    width: 80%;
+    height: 50%;
+  }
+  .contact-right-side .contact-information h1 {
+    margin-top: 0;
+    font-family: "Lustria", serif;
+  }
+  .contact-right-side form {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 80%;
+    height: 50%;
+    text-align: left;
+    vertical-align: middle;
+    z-index: 1;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .contact-right-side form .form-input {
+    margin-bottom: 10px;
+    width: 88%;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    transition: border-color 0.15s ease-in-out;
+  }
+  .contact-right-side form textarea {
+    resize: none;
+    width: 88%;
+    height: 18vh;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 18px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    transition: border-color 0.15s ease-in-out;
+  }
+
+  .contact-right-side form #contact-button {
+    display: block;
+    margin-top: 20px;
+    background-color: #222;
+    box-sizing: border-box;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+</style>
