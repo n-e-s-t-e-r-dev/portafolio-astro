@@ -14,7 +14,7 @@ const { href, title, body, myproject } = Astro.props;
     <h2>
       {title}
       <span>&rarr;</span>
-	  <span class="p">
+      <span class="p">
         {body}
       </span>
     </h2>
@@ -32,16 +32,19 @@ const { href, title, body, myproject } = Astro.props;
   }
   .link-card a h2 {
     font-family: "Lato", sans-serif;
-	padding: .1rem 2rem;
+    padding: 0.1rem 2rem;
     letter-spacing: 1px;
     line-height: 0.9em;
-	font-size: small;
+    font-size: small;
     text-align: start;
+    color: black;
+  
   }
   .link-card a h2 .p {
     font-family: "Lato", sans-serif;
     letter-spacing: 1px;
     line-height: 0.5em;
-	font-size: small;
+    font-size: small;
+    color: rgb(49, 49, 49);
   }
 </style>
