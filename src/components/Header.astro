@@ -1,45 +1,57 @@
 ---
 const navItems = [
   {
-    title: 'about',
-    url: '/#about'
+    title: "about",
+    url: "/#about",
   },
   {
-    title: 'projects',
-    url: '/#projects'
+    title: "projects",
+    url: "/#projects",
   },
   {
-    title: 'interesting',
-    url: '/#interesting'
+    title: "interesting",
+    url: "/#interesting",
   },
   {
-    title: 'contact',
-    url: '/#contact'
+    title: "contact",
+    url: "/#contact",
   },
-]
-
+];
 ---
 
-<header>
+<header class="">
   <a href="./" class="personal-logo" id="personal-logo">nesterdev</a>
-  <div id="hamburger"></div>
-  <nav>
-    <a href="https://github.com/n-e-s-t-e-r-dev" target="_blank" class="img"><img src="/github.webp" alt="logo github"></a>
-    <a href="https://www.linkedin.com/in/nesterdev/" target="_blank" class="img"><img src="/linkedin.webp" alt="logo linkedin"></a>
-    {navItems.map(link => (
-      <a class="nav-links"
-        href={link.url}>{link.title}</a
+  <div class="menu" id="hamburger"><box-icon name="menu" color="#000"></box-icon></div>
+  <nav class="nav-items">
+    <div class="absolute-cerrar">
+      <div class="cerrar" id="cerrar"><box-icon name="x" color="#000"></box-icon></div>
+    </div>
+    <div class="flex-icnos">
+      <a href="https://github.com/n-e-s-t-e-r-dev" target="_blank" class="img"
+        ><img src="/github.webp" alt="logo github" /></a
       >
-    ))}
+      <a
+        href="https://www.linkedin.com/in/nesterdev/"
+        target="_blank"
+        class="img"><img src="/linkedin.webp" alt="logo linkedin" /></a
+      >
+    </div>
+    {
+      navItems.map((link) => (
+        <a class="nav-links" href={link.url}>
+          {link.title}
+        </a>
+      ))
+    }
   </nav>
 </header>
 
 <style>
-    *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
- }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   header {
     display: flex;
     justify-content: space-between;
@@ -49,6 +61,18 @@ const navItems = [
   a {
     text-decoration: none;
   }
+  nav {
+    display: flex;
+  }
+  .absolute-cerrar {
+    position: relative;
+  }
+  .menu {
+    display: none;
+  }
+  .cerrar {
+    display: none;
+  }
   header .personal-logo {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
       Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
@@ -56,6 +80,12 @@ const navItems = [
     font-weight: bolder;
     font-size: x-large;
     letter-spacing: 0.25rem;
+  }
+
+  .flex-icnos {
+    padding: 0rem 1rem;
+    display: inline-block;
+    justify-content: space-between;
   }
 
   nav .nav-links {
@@ -90,11 +120,110 @@ const navItems = [
     padding: 5px 5px;
     justify-content: center;
   }
-  .img img{
+  .img img {
     color: #ffffff;
-    width: 1.40rem;
-    height: 1.40rem;
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  @media screen and (max-width: 887px) {
+    .active {
+      position: fixed;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      z-index: 100;
+      background-color: #fbc09416;
+      padding: 0rem 1rem;
+      height: 13rem;
+    }
+    .menu {
+      display: block;
+    }
+    .cerrar {
+      display: block;
+      color: #fff;
+    }
+    nav {
+      display: none;
+    }
+    header {
+      position: fixed;
+      width: 100%;
+      display: flex;
+      height: 12rem;
+      align-items: center;
+      z-index: 100;
+      background-color: #fffbf8;
+      padding: 0rem 1rem;
+      height: 4rem;
+    }
+    nav .nav-links {
+    display: flex;
+    padding: 5px 10px;
+    background-color: #00000000;
+    border: 1px solid #00000000;
+    text-align: center;
+    color: #fff;
+  }
+    .flex-icnos {
+      padding: 0rem 1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    .absolute-cerrar {
+      position: relative;
+      padding: 1rem;
+    }
+    .cerrar {
+      position: absolute;
+      right: 0px;
+      top: 0;
+    }
   }
 </style>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector("header");
+    const nav = document.querySelector(".nav-items");
+    const menu = document.querySelector(".menu");
+    const cerrar = document.querySelector(".cerrar");
 
+    function actualizarEstilos() {
+      const headerWidth = header.clientWidth;
+      if (headerWidth > 870) {
+        nav.style.display = "block";
+        menu.style.display = "none";
+        header.classList.add("active");
+      } else {
+        nav.style.display = "none";
+        menu.style.display = "block";
+        header.classList.remove("active");
+      }
+    }
+
+    // Agrega un listener para el evento de clic
+    menu.addEventListener("click", function (event) {
+      header.classList.add("active");
+      nav.style.display = "block";
+      menu.style.display = "none";
+      event.preventDefault();
+    });
+
+    cerrar.addEventListener("click", function (event) {
+      header.classList.remove("active");
+      menu.style.display = "block";
+      nav.style.display = "none";
+      event.preventDefault();
+    });
+
+    // Manejar cambios en el tamaño de la ventana
+    window.addEventListener("resize", function () {
+      actualizarEstilos();
+      
+    });
+
+    // Inicializar estilos
+    actualizarEstilos();
+  });
+</script>

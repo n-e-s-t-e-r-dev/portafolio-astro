@@ -1,6 +1,8 @@
+<div class="father">
 <a
   href="https://www.mythrillfiction.com/the-dark-rider"
   target="_blank"
+  class="card-hijo"
 >
   <div class="card-img">
     <div class="wrapper">
@@ -12,8 +14,10 @@
 </a>
 
 <a
+
   href="https://www.mythrillfiction.com/force-mage"
   target="_blank"
+  class="card-hijo"
 >
   <div class="card-img">
     <div class="wrapper">
@@ -26,6 +30,7 @@
 <a
   href="https://www.mythrillfiction.com/force-mage"
   target="_blank"
+  class="card-hijo"
 >
   <div class="card-img">
     <div class="wrapper">
@@ -38,6 +43,7 @@
 <a
   href="https://www.mythrillfiction.com/force-mage"
   target="_blank"
+  class="card-hijo"
 >
   <div class="card-img">
     <div class="wrapper">
@@ -50,6 +56,7 @@
 <a
   href="https://www.mythrillfiction.com/force-mage"
   target="_blank"
+  class="card-hijo"
 >
   <div class="card-img">
     <div class="wrapper">
@@ -62,6 +69,7 @@
 <a
   href="https://www.mythrillfiction.com/force-mage"
   target="_blank"
+  class="card-hijo"
 >
   <div class="card-img">
     <div class="wrapper">
@@ -74,6 +82,7 @@
 <a
   href="https://www.mythrillfiction.com/force-mage"
   target="_blank"
+  class="card-hijo"
 >
   <div class="card-img">
     <div class="wrapper">
@@ -86,6 +95,7 @@
 <a
   href="https://www.mythrillfiction.com/force-mage"
   target="_blank"
+  class="card-hijo"
 >
   <div class="card-img">
     <div class="wrapper">
@@ -98,6 +108,7 @@
 <a
   href="https://www.mythrillfiction.com/force-mage"
   target="_blank"
+  class="card-hijo"
 >
   <div class="card-img">
     <div class="wrapper">
@@ -110,6 +121,7 @@
 <a
   href="https://www.mythrillfiction.com/force-mage"
   target="_blank"
+  class="card-hijo"
 >
   <div class="card-img">
     <div class="wrapper">
@@ -122,6 +134,7 @@
 <a
   href="https://www.mythrillfiction.com/force-mage"
   target="_blank"
+  class="card-hijo"
 >
   <div class="card-img">
     <div class="wrapper">
@@ -134,6 +147,7 @@
 <a
   href="https://www.mythrillfiction.com/force-mage"
   target="_blank"
+  class="card-hijo"
 >
   <div class="card-img">
     <div class="wrapper">
@@ -143,118 +157,142 @@
     <img src="/sass.webp" class="character" />
   </div>
 </a>
+</div>
 <style>
   *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
  }
-  :root {
-    --card-height: 100px;
-    --card-width: calc(var(--card-height) / 1.5);
-  }
-  a {
-    text-decoration: none;
-    padding: 1rem;
-  }
-  .card-img {
-    width: var(--card-width);
-    height: var(--card-height);
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 2500px;
-  }
 
-  .cover-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+:root {
+  --card-height: 100px;
+  --card-width: calc(var(--card-height) / 1.5);
+}
 
-  .wrapper {
-    transition: all 0.5s;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-  }
+.father {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(var(--card-width), 1fr));
+  gap: 1rem;
+  justify-content: space-between;
+}
 
-  .card-img:hover .wrapper {
-    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
-    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-  }
+a {
+  text-decoration: none;
+  padding: 0rem;
+}
 
-  .wrapper::before,
-  .wrapper::after {
-    content: "";
-    opacity: 0;
-    width: 100%;
-    height: 80px;
-    transition: all 0.5s;
-    position: absolute;
-    left: 0;
-  }
-  .wrapper::before {
-    top: 0;
-    height: 100%;
-    background-image: linear-gradient(
-      to top,
-      transparent 46%,
-      rgba(12, 13, 19, 0.5) 68%,
-      rgba(12, 13, 19) 97%
-    );
-  }
-  .wrapper::after {
-    bottom: 0;
-    opacity: 1;
-    background-image: linear-gradient(
-      to bottom,
-      transparent 46%,
-      rgba(12, 13, 19, 0.5) 68%,
-      rgba(12, 13, 19) 97%
-    );
-  }
+.card-img {
+  width: var(--card-width);
+  height: var(--card-height);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 2500px;
+}
 
-  .card-img:hover .wrapper::before,
-  .wrapper::after {
-    opacity: 1;
-  }
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  .card-img:hover .wrapper::after {
-    height: 120px;
-  }
-  .title {
-    width: 100%;
-    display: flex-end;
-    transition: transform 0.5s;
-    font-weight: bold;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-      sans-serif;
-    font-size: large;
-    position: absolute;
-    bottom: -10px;
-    text-align: center;
-    justify-content: center;
-    color: rgb(254, 141, 3);
-  }
-  .card-img:hover .title {
-    transform: translate3d(0%, -100px, 100px);
-  }
+.wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
 
-  .character {
-    width: 100%;
-    opacity: 0;
-    transition: all 0.5s;
-    position: absolute;
-    z-index: -1;
-  }
+.card-img:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
 
-  .card-img:hover .character {
-    opacity: 1;
-    transform: translate3d(0%, -8%, 90px);
-  }
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+
+.wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.card-img:hover .wrapper::before,
+.wrapper::after {
+  opacity: 1;
+}
+
+.card-img:hover .wrapper::after {
+  height: 120px;
+}
+
+.title {
+  width: 100%;
+  display: flex-end;
+  transition: transform 0.5s;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 10px;
+  position: absolute;
+  bottom: -10px;
+  text-align: center;
+  justify-content: center;
+  color: rgb(254, 141, 3);
+}
+
+.card-img:hover .title {
+  transform: translate3d(0%, -100px, 100px);
+}
+
+.character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.card-img:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -8%, 90px);
+}
+@media screen and (max-width: 1024px) {
+  .father {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-width), 1fr));
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+}
 </style>

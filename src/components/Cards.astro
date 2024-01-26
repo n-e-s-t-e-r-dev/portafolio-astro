@@ -238,4 +238,24 @@ import Card from "./Card.astro";
     box-shadow: var(--color3);
     filter: blur(0px);
   }
+
+  @media screen and (max-width: 1000px) {
+    .card {
+      outline: 1% solid var(--color4);
+      border: none;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+      grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+      background-color: var(--color5);
+      gap: 1.5% 1.5%;
+      grid-template-areas:
+        "items-1 items-1 items-2 items-2"
+        "items-1 items-1 items-3 items-3"
+        "items-5 items-5 items-4 items-4"
+        "items-6 items-6 items-4 items-4"
+        "items-7 items-7 items-8 items-8"; /* Add semicolon here */
+
+      width: 100%;
+    }
+  }
 </style>
